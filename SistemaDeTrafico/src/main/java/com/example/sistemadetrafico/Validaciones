@@ -1,0 +1,96 @@
+Para modificar paradas:
+if (nuevoNumero < 0) {
+            mensajeError = "El número de parada no puede ser negativo";
+            return mensajeError;
+        }
+
+        int index = paradas.indexOf(parada);
+        if (index == -1) {
+            mensajeError = "La parada no existe";
+            return mensajeError;
+        }
+
+        for (Parada p : paradas) {
+            if (p.getNumero() == nuevoNumero && !p.equals(parada)) {
+                mensajeError = "Ya existe una parada con el número " + nuevoNumero;
+                return mensajeError;
+            }
+        }
+}
+
+Para modificar rutas:
+if (nuevoTiempo < 0) {
+            mensajeError = "El tiempo de la ruta no puede ser negativo";
+            return mensajeError;
+        }
+        if (nuevosTransbordos < 0) {
+            mensajeError = "El número de transbordos no puede ser negativo";
+            return mensajeError;
+        }
+
+        if (!rutas.contains(ruta)) {
+            mensajeError = "La ruta no existe";
+            return mensajeError;
+        }
+
+        if (!paradas.contains(nuevoOrigen)) {
+            mensajeError = "La parada de origen no existe";
+            return mensajeError;
+        }
+        if (!paradas.contains(nuevoDestino)) {
+            mensajeError = "La parada de destino no existe";
+            return mensajeError;
+        }
+
+        for (Ruta r : rutas) {
+            if (!r.equals(ruta) && r.getOrigen().equals(nuevoOrigen) && r.getDestino().equals(nuevoDestino)) {
+                mensajeError = "Ya existe una ruta entre estas paradas";
+                return mensajeError;
+            }
+        }
+
+Para eliminar una parada:
+if (i == -1) {
+            mensajeError = "La parada no existe";
+            return mensajeError;
+        }
+
+Para agregar rutas:
+/*if (ruta.getTiempo() < 0) {
+            mensajeError = "El tiempo de la ruta no puede ser negativo";
+            return mensajeError;
+        }
+        if (ruta.getTransbordos() < 0) {
+            mensajeError = "El número de transbordos no puede ser negativo";
+            return mensajeError;
+        }
+
+        if (!paradas.contains(ruta.getOrigen())) {
+            mensajeError = "La parada de origen no existe";
+            return mensajeError;
+        }
+        if (!paradas.contains(ruta.getDestino())) {
+            mensajeError = "La parada de destino no existe";
+            return mensajeError;
+        }
+
+        for (Ruta r : rutas) {
+            if (r.getOrigen().equals(ruta.getOrigen()) && r.getDestino().equals(ruta.getDestino())) {
+                mensajeError = "Ya existe una ruta entre estas paradas";
+                return mensajeError;
+            }
+        }*/
+
+
+Para agregar parada:
+/*if (parada.getNumero() < 0) {
+            mensajeError = "El número de parada no puede ser negativo";
+            return mensajeError;
+        }
+
+        for (Parada p : paradas) {
+            if (p.getNumero() == parada.getNumero()) {
+                mensajeError = "Ya existe una parada con el número " + parada.getNumero();
+                return mensajeError;
+            }
+        }*/

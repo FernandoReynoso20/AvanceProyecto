@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="342.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sistemadetrafico.Grafo">
+   <children>
+      <AnchorPane prefHeight="83.0" prefWidth="600.0" style="-fx-background-color: #0047AB;">
+         <children>
+            <Label layoutX="14.0" layoutY="16.0" text="Sistema de Tráfico" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <RadioButton fx:id="rdbtnAgregar" layoutX="435.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Agregar" />
+      <RadioButton layoutX="435.0" layoutY="194.0" mnemonicParsing="false" text="Modificar" />
+      <RadioButton layoutX="435.0" layoutY="226.0" mnemonicParsing="false" text="Eliminar" />
+      <AnchorPane layoutX="24.0" layoutY="103.0" prefHeight="45.0" prefWidth="270.0">
+         <children>
+            <Label layoutX="5.0" layoutY="15.0" text="Parada n:" />
+            <TextField layoutX="60.0" layoutY="10.0" prefHeight="25.0" prefWidth="195.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="24.0" layoutY="103.0" prefHeight="45.0" prefWidth="270.0" />
+      <AnchorPane layoutX="24.0" layoutY="103.0" prefHeight="45.0" prefWidth="270.0" />
+      <AnchorPane layoutX="24.0" layoutY="166.0" prefHeight="154.0" prefWidth="291.0">
+         <children>
+            <Label text="Origen:" translateX="10.0" translateY="50.0" />
+            <Label layoutX="10.0" layoutY="10.0" text="Agregar Ruta:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField layoutX="53.0" layoutY="46.0" prefHeight="25.0" prefWidth="79.0" />
+            <Label layoutX="7.0" layoutY="10.0" text="Destino:" translateX="130.0" translateY="40.0" />
+            <TextField layoutX="187.0" layoutY="46.0" prefHeight="25.0" prefWidth="79.0" />
+            <TextField layoutX="60.0" layoutY="88.0" prefHeight="25.0" prefWidth="49.0" />
+            <Label layoutX="10.0" layoutY="92.0" text="Tiempo:" />
+            <Label layoutX="137.0" layoutY="92.0" text="Transbordos:" />
+            <Label layoutX="71.0" layoutY="113.0" text="(min)" />
+            <TextField layoutX="207.0" layoutY="88.0" prefHeight="25.0" prefWidth="57.0" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="335.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Agregar" />
+      <Button disable="true" layoutX="420.0" layoutY="303.0" mnemonicParsing="false" text="Modificar" />
+      <Button disable="true" layoutX="499.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Eliminar" />
+   </children>
+</AnchorPane>
